@@ -21,8 +21,8 @@ public class TrainDeparture {
     public int calculateTimeBetweenStations(final TrainStations startingStation, final TrainStations endStation) {
         final List<TrainStations> route = trainRoute.getLillehammerToOslo();
 
-        int start = route.indexOf(startingStation);
-        int end = route.indexOf(endStation);
+        final int start = route.indexOf(startingStation);
+        final int end = route.indexOf(endStation);
         int travelTime = 0;
 
         for (int i = start; i < end; i++) {

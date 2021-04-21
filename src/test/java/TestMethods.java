@@ -44,15 +44,15 @@ public class TestMethods {
         final TrainRide train4 = departures.findWhichTrainToTake(LocalTime.of(22, 0), TrainStations.OSLO);
         final TrainRide train5 = departures.findWhichTrainToTake(LocalTime.of(21, 59), TrainStations.OSLO);
         final TrainRide train6 = departures.findWhichTrainToTake(LocalTime.of(21, 30), TrainStations.OSLO);
-        final TrainRide train7 = departures.findWhichTrainToTake(LocalTime.of(00, 30), TrainStations.OSLO);
+        final TrainRide train7 = departures.findWhichTrainToTake(LocalTime.of(0, 30), TrainStations.OSLO);
 
         assertThat(train.getDepartureTime(), is(LocalTime.of(8,0)));
         assertThat(train2.getDepartureTime(), is(LocalTime.of(13,0)));
         assertThat(train3.getDepartureTime(), is(LocalTime.of(4,0)));
-        assertThat(train4.getDepartureTime(), is(LocalTime.of(19,00)));
-        assertThat(train5.getDepartureTime(), is(LocalTime.of(19,00)));
-        assertThat(train6.getDepartureTime(), is(LocalTime.of(19,00)));
-        assertThat(train7.getDepartureTime(), is(LocalTime.of(22,00)));
+        assertThat(train4.getDepartureTime(), is(LocalTime.of(19,0)));
+        assertThat(train5.getDepartureTime(), is(LocalTime.of(19,0)));
+        assertThat(train6.getDepartureTime(), is(LocalTime.of(19,0)));
+        assertThat(train7.getDepartureTime(), is(LocalTime.of(22,0)));
 
     }
 
@@ -66,7 +66,7 @@ public class TestMethods {
     }
 
 
-    public TrainDeparture prepareDepartures() {
+    private TrainDeparture prepareDepartures() {
         final TrainDeparture trainDeparture = new TrainDeparture(new ArrayList<>());
         List<TrainRide> trainRidesToDepart = new ArrayList<>();
 

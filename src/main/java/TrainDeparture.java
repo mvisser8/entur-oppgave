@@ -60,11 +60,11 @@ public class TrainDeparture {
         return passengers;
     }
 
-    public int determineMunicipalityModifier(final TrainStations trainStation, final List<TrainStations> route) {
+    private int determineMunicipalityModifier(final TrainStations trainStation, final List<TrainStations> route) {
         return (int) route.stream().filter(station -> station.getMunicipality().equals(trainStation.getMunicipality())).count();
     }
 
-    public double determineTimeModifier(final LocalTime currentTime) {
+    private double determineTimeModifier(final LocalTime currentTime) {
         if (currentTime.isAfter(LocalTime.of(5, 59)) && currentTime.isBefore(LocalTime.of(9, 1))) {
             return 2;
         }

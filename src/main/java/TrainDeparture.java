@@ -12,7 +12,7 @@ import java.util.List;
 @RequiredArgsConstructor
 public class TrainDeparture {
     public List<TrainRide> trainRides;
-    TrainRoute trainRoute = new TrainRoute();
+    private final TrainRoute trainRoute = new TrainRoute();
 
     public void departTrain(final TrainRide trainRide) {
         trainRides.add(trainRide);
